@@ -19,33 +19,3 @@ const inpclue = document.querySelector('.js__clue');
 const attempsNum = document.querySelector('.js__attemps')
 
 
-function getRandomNumber(max) {
-    return Math.ceil(Math.random() * max);
-}
-
-let randomNumber = getRandomNumber(100);//número aleatorio
-    console.log('Mi número aleatorio es: ' + randomNumber);
-
-
-function comparedNum(randomNumber , numValue){
-    console.log('hola' + numValue);
-    if (numValue === randomNumber){
-        inpclue.innerHTML = 'Has ganado campeona!!';
-    }
-    if (numValue > randomNumber){
-        inpclue.innerHTML = 'Demasiado alto';
-    }else{
-        inpclue.innerHTML = 'Demasiado bajo';
-    }
-}
-
-function handleClickButton(event){
-    event.preventDefault;
-    const numValue = parseInt(inpNumber.value);
-    comparedNum(randomNumber , numValue);
-
-}
-
-
-btn.addEventListener("click", handleClickButton);
-
