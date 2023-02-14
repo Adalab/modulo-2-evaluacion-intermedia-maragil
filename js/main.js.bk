@@ -16,34 +16,27 @@
 const inpNumber = document.querySelector('.js__number');
 const btn = document.querySelector('.js__button');
 const attempsNum = document.querySelector('.js__attemps');
-const msj = document.querySelector('.js__msj');
-let attemps = 0;
-const hitNumber = document.querySelector('.js__hit');
-let hit = 0;
+
+const inpNumValue = parseInt(inpNumber.value);
+
+
 
 function userMsj(){
-    const inpNumValue = parseInt(inpNumber.value);
-    let msjResult = "Tienes que introducir un numero";
     if (inpNumValue === randomNumber){
-        // console.log('Has ganado campeona!!!');
-        msjResult = 'Has ganado campeona';
-        hit++;
-    //    hitNumber.innerHTML = hit;
-    } else if (inpNumValue < randomNumber){
-        // console.log('Demasiado bajo');
-        msjResult = "Demasiado bajo";
-    } else if (inpNumValue > randomNumber){
-        // console.log('Demasiado alto');
-        msjResult = "Demasiado alto";
+        console.log('Has ganado campeona!');
     }
-        msj.innerHTML = msjResult;
+    console.log("inpNumValue: " + inpNumValue + "randomNumber" + randomNumber);
 }
 
-function counter(){
-    attemps++
-    attempsNum.innerHTML = attemps;
-    hitNumber.innerHTML = hit;
-}
+
+    // } else if (inpNumValue > randomNumber) {
+    //     console.log('Demasiado alto');
+
+
+    // } if (inpNumValue < randomNumber) {
+    //     console.log('Demasiado bajo');
+
+
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
@@ -55,8 +48,8 @@ function handleClick(event){
     event.preventDefault();
 
     userMsj();
-
-    counter();
+    console.log("handle funtion " + inpNumValue)
+    console.log(inpNumber);
 }
 
 btn.addEventListener('click' , handleClick);
