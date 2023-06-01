@@ -1,22 +1,35 @@
 .body{
+    height: 100vh;
     text-align: center;
+    background-image: url('../img/fondo.avif');
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .title{
-    font-size: 40px;
-        text-shadow: 1px 1px violet;
+    /* color:deeppink; */
+    /* background-color: aliceblue; */
+    color: fuchsia;
+    font-size: 100px;
+    text-shadow: 1px 1px violet;
 }
 
 .button{
     background-color: violet;
     color: wheat;
+    font-size: 30px;
     font-weight: bold;
     border-color: violet;
     border-radius: 5px;
+    width: 150px;
+    height: 50px;
 }
 
 .input{
-    width: 50%;
+    height: 40px;
+    /* width: 40%; */
     border-color: darksalmon;
     border-width: 5px;
     border-style: groove;
@@ -24,4 +37,12 @@
 
 .js__msj{
     font-weight: 600;
+    font-size: 50px;
+    color: fuchsia;
+}
+
+.attempt{
+    font-size: 40px;
+    font-weight: bold;
+    color: fuchsia;
 }
